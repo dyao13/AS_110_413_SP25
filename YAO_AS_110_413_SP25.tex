@@ -1,0 +1,401 @@
+\documentclass[titlepage]{article}
+
+\usepackage{preamble}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage \newsection{Introduction.}
+
+\subsection{Section.} Introduction.
+
+\newpage \newsection{Countability and Separation Axioms.}
+
+\subsection{Section.} Countability and Separation Axioms.
+
+\subsection{Definition.} A space $X$ is said to have a countable basis at $x$ if there exists a countable collection $\mathcal{B}$ of neighborhoods of $x$ such that each neighborhood of $x$ contains at least one of the elements of $\mathcal{B}$.
+
+\subsection{Definition.} A space $X$ is said to be first-countable if it has a countable basis at each of its points.
+
+\subsection{Lemma.} (Sequence lemma) Let $X$ be a topological space. Let $A$ be a subset of $X$. If there exists a sequence of points of $A$ converging to $x$, then $x \in \overline{A}$. The converse holds if $X$ if first-countable.
+
+\subsection{Proof.}
+
+($\Rightarrow$) Let $(x_{n})$ be a sequence of points of $A$ converging to $x$. Then, every neighborhood $U$ of $x$ contains all but finitely many points of $(x_{n})$, so $U \cap A$ is nonempty, which means precisely that $x \in \overline{A}$.
+
+($\Leftarrow$) Let $X$ be first-countable. Let $B_{1}, B_{2}, \ldots$ be a countable basis at $x$. Define a new countable basis with $B_{1}' = B_{1}$ and $B_{n+1}' = B_{n+1} \cap B_{n}'$ for $n = 1, 2, \ldots$. For each $n$, choose a point $x_{n} \in B_{n}' \cap A$. Then, $(x_{n})$ is a sequence of points of $A$ converging to $x$.
+
+\subsection{Theorem.} Let $f: X \to Y$. If $f$ is continuous, then for every convergent sequence $x_{n} \to x$ in $X$, the sequence $f(x_{n})$ converges to $f(x)$. The converse holds if $X$ is first-countable.
+
+\subsection{Proof.}
+
+($\Rightarrow$) Let $V$ be a neighborhood of $f(x)$. Then $f^{-1}(V)$ is a neighborhood of $x$ that contains all but finitely many points of $(x_{n})$. Thus, all but finitely many points of $(f(x_{n}))$ are in $V$, so $f(x_{n}) \to f(x)$.
+
+($\Leftarrow$) Let $X$ be first-countable. Let $A \subseteq X$. We want to show $f(\overline{A}) \subseteq \overline{f(A)}$. By the sequence lemma, if $x \in \overline{A}$, then there exists a sequence $(x_{n})$ of points of $A$ converging to $x$ and hence a sequence of points $f(x_{n})$ of $f(A)$ converging to $f(x)$. So $f(x) \in \overline{f(A)}$ by the sequence lemma, which means that $f(\overline{A}) \subseteq \overline{f(A)}$.
+
+\subsection{Definition.} A space $X$ is said to be second-countable if it has a countable basis.
+
+\subsection{Lemma.} If $X$ is second-countable, then any discrete subspace of $X$ is countable.
+
+\subsection{Proof.} Let $Y$ be a discrete subspace of $X$. For each $y \in Y$, choose a basic neighborhood $B_{y}$ that contains only $y$. Then the map $y \mapsto B_{y}$ is injective, so $Y$ is countable.
+
+\subsection{Example.} The uniform topology $\R^{\omega}$ is first-countable but not second-countable. $\R^{\omega}$ is metrizable, so it is first-countable. Let $Y$ be the set of all sequences of $0$s and $1$s. Then $Y$ is a discrete subspace, but $Y$ is uncountable, so $\R^{\omega}$ is not second-countable in the uniform topology.
+
+\subsection{Theorem.} 
+
+(a) A subspace of a first-countable space is first-countable.
+
+(b) A countable product of first-countable spaces is first-countable.
+
+(c) A subspace of a second-countable space is second-countable.
+
+(d) A countable product of second-countable spaces is second-countable.
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Definition.} A space $X$ is said to satisfy the Lindlof property if every open cover of $X$ has a countable subcover.
+
+\subsection{Theorem.} A second-countable space is Lindlof.
+
+\subsection{Proof.} Let $\mathcal{A}$ be an open cover of $X$. Let $\{B_{n}\}$ be a countable basis for $X$. For each $n$ for which it is possible, choose $A_{n} \in \mathcal{A}$ such that $B_{n} \subseteq A_{n}$. Then the collection $\{A_{n}\}$ is a countable subcover of $\mathcal{A}$. Indeed, for all $x \in X$, there exists an open $A \in \mathcal{A}$ that contains $x$, which in turn contains a basic neighborhood $B_{n}$ of $x$. So $A_{n}$ is defined and contains $x$.
+
+\subsection{Definition.} A space $X$ is said to be separable if it has a countable dense subset.
+
+\subsection{Theorem.} A second-countable space is separable.
+
+\subsection{Proof.}
+
+Let $\{B_{n}\}$ be a countable basis for $X$. For each $n$, choose an $x_{n} \in B_{n}$. Then the set $D$ of all such $x_{n}$ is countable and dense.
+
+\subsection{Theorem.} Second-countability, Lindlofness, and separabilty are equivalent for a metrizable space.
+
+\subsection{Proof.} See Munkres Section 30 Exercise 5.
+
+\subsection{Definition.} A space $X$ is said to be $T_{1}$ is for every pair of distinct points $x$ and $y$, there exists a neighborhood $U$ of $x$ such that $y \notin U$.
+
+\subsection{Lemma.} A space $X$ is $T_{1}$ if and only if every singleton set $\{x\}$ is closed.
+
+\subsection{Proof.}
+
+($\Rightarrow$) Suppose that $X$ is $T_{1}$. $\{x\}$ is its own closure, for any other point $y$ has a neighborhood $U$ disjoint from $\{x\}$. So $\{x\}$ is closed.
+
+($\Leftarrow$) Suppose that $\{x\}$ is closed. Let $y \in X$ be distinct from $x$. Then there exists a neighborhood $U$ of $y$ that does not contain $x$. So $X$ is $T_{1}$.
+
+\subsection{Definition.} A space $X$ is said to be $T_{2}$, or Hausdorff, if every pair of distinct points $x$ and $y$ have distinct neighborhoods $U$ and $V$, respectively.
+
+\subsection{Definition.} A space $X$ is said to be regular if for every point $x$ and closed set $A$ such that $x \notin A$, there exists disjoint neighborhoods $U$ and $V$, respectively,
+
+\subsection{Definition.} A space $X$ is said to be $T_{3}$ if it is $T_{1}$ and regular.
+
+\subsection{Definition.} A space $X$ is said to be normal if for every pair of disjoint closed sets $A$ and $B$, there exist disjoint neighborhoods $U$ and $V$ of $A$ and $B$, respectively.
+
+\subsection{Definition.} A space $X$ is said to be $T_{4}$ if it is $T_{1}$ and normal.
+
+\subsection{Theorem.} $T_{4}$ implies $T_{3}$ implies $T_{2}$ implies $T_{1}$.
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Remark.} For convenience, regular shall refer to $T_{3}$ and normal shall refer to $T_{4}$.
+
+\subsection{Lemma.} Let $X$ be a $T_{1}$ space. $X$ is regular if and only if for every $x \in X$ and every neighborhood $U$ of $x$, there exists a neighborhood $V$ of $x$ such that $\overline{V} \subseteq U$.
+
+\subsection{Proof.}
+
+($\Rightarrow$) Let $x \in X$ and $U$ be a neighborhood of $x$. Let $B = X - U$. Then $A$ is closed, so there exists a neighborhood $V$ of $x$ that is disjoint from a neighborhood $W$ of $B$. Moreover, $\bar{V}$ is disjoint from $B$, and $\bar{V} \subseteq U$, as desired.
+
+($\Leftarrow$) Let $x \in X$ and $B \subseteq X$ be a closed subset disjoint from $x$. Let $U = X - B$. By hypothesis, there exists a neighborhood $V$ of $x$ such that $\bar{V} \subseteq U$. The open sets $V$ and $X - \bar{V}$ are disjoint open sets containing $x$ and $B$, respectively.
+
+\subsection{Lemma.} Let $X$ be a $T_{1}$ space. $X$ is normal if and only if for every closed subset $A$ of $X$ and every neighborhood $U$ of $A$, there exists a neighborhood $V$ of $A$ such that $\overline{V} \subseteq U$.
+
+\subsection{Proof.} The proof is exactly the same as for the previous theorem.
+
+\subsection{Theorem.}
+
+(a) A subspace of a Hausdorff space is Hausdorff.
+
+(b) A product of Hausdorff spaces is Hausdorff.
+
+(c) A subspace of a regular space is regular.
+
+(d) a product of regular spaces is regular.
+
+\subsection{Proof.}
+
+(a) Let $X$ be Hausdorf and let $Y$ be a subspace of $X$. Let $x$ and $y$ be distinct points of $Y$. There exist disjoint neighborhoods $U$ and $V$ of $x$ and $y$, respectively, in $X$. Then $U \cap Y$ and $V \cap Y$ are disjoint neighborhoods of $x$ and $y$, respectively, in $Y$.
+
+(b) Let $\{X_{\alpha}\}$ be a collection of Hausdorff spaces and let $X$ be the product space. Let $x$ and $y$ be distinct points of $X$. Then there exists at least one $\beta$ such that $x_{\beta} \neq y_{\beta}$. Let $U_{\beta}$ and $V_{\beta}$ be disjoint neighborhoods of $x_{\beta}$ and $y_{\beta}$, respectively, in $X_{\beta}$. The sets $\pi_{\beta}^{-1}(U_{\beta})$ and $\pi_{\beta}^{-1}(V_{\beta})$ are disjoint neighborhoods of $x$ and $y$, respectively, in $X$.
+
+(c) Let $X$ be regular and let $Y$ be a subspace of $X$. Let $x \in Y$ and let $B$ be a closed subset of $Y$ that does not contain $x$. Let $\overline{B}$ be the closure of $B$ in $X$. Then $\overline{B} \cap Y = B$, so $x \not\in \overline{B}$. By the regularity of $X$, the exist disjoint neighborhoods $U$ and $V$ of $x$ and $\overline{B}$, respectively, in $X$. Then $U \cap Y$ and $V \cap Y$ are disjoint neighborhoods of $x$ and $B$, respectively, in $Y$.
+
+(d) Let $\{X_{\alpha}\}$ be a collection of regular spaces and let $X$ be the product space. It follows immediately that $X$ is $T_{1}$ by theorem 1.36a. Let $x \in X$ have the neighborhood $U$ equals the product of $U_{\alpha}$. For each $U_{\alpha}$, let $V_{\alpha}$ be a neighborhood of $x_{\alpha}$ such that $\overline{V_{\alpha}} \subseteq U_{\alpha}$ by Lemma 1.32. If $U_{\alpha} = X_{\alpha}$, then let $V_{\alpha} = X_{\alpha}$. Let $V$ be the product of $V_{\alpha}$. Then $\overline{V} \subseteq U$, so $X$ is regular.
+
+\subsection{Example.} $\R_{K}$ is Hausdorff but not regular.
+
+\subsection{Example.} $\R_{l}$ is normal.
+
+\subsection{Example.} $\R_{l} \times \R_{l}$ is regular but not normal.
+
+\subsection{Theorem.} A regular space with a countable basis is normal.
+
+\subsection{Proof.} Let $X$ be a regular space with a countable basis $\mathcal{B}$. Let $A$ and $B$ be disjoint closed subsets of $X$. For each $x \in A$, there exists a neighborhood $U$ of $x$ and a neighborhood $V$ of $x$ such that $\overline{V} \subseteq U$. For each such $V$, choose a basic neighborhood $U_{x}$ of $x$ contained in $V$. This is a countable covering of $A$ by sets whose closures do not intersect $B$. Index these sets as $\{U_{n}\}$. Similarly, cover $B$ with a countable collection of neighborhoods $\{V_{n}\}$.
+
+Define 
+$$U_{n}' = U_{n} - \bigcup_{i=1}^{n} \overline{V_{i}}$$
+and 
+$$V_{n}' = V_{n} - \bigcup_{i=1}^{n} \overline{U_{i}}.$$
+Each such set is open because it is the difference between an open set and a closed set. Furthermore, the collection $\{U_{n}'\}$ is an open cover of $A$ and the collection $\{V_{n}'\}$ is an open cover of $B$. The open sets 
+$$U' = \bigcup_{n=1}^{\infty} U_{n}'$$
+and 
+$$V' = \bigcup_{n=1}^{\infty} V_{n}'$$
+are disjoint open sets that contain $A$ and $B$. Indeed, if $x \in U' \cap V'$, then $x \in U_{i}' \cap V_{j}'$ for some $i$ and $j$. Without loss of generality, assume that $i \leq j$. Then $x \in U_{i}$, but $x \not\in \overline{U_{i}}$, hence a contradiction.
+
+\subsection{Theorem.} A metrizable space is normal.
+
+\subsection{Proof.} Let $X$ be a metrizable space with metric $d$. Let $A$ and $B$ be disjoint closed subsets of $X$. For each $a \in A$, choose $\epsilon_{a}$ such that $B(a, \epsilon_{a})$ is disjoint from $B$, and similarly, choose $\epsilon_{b}$ for each $b \in B$. The open sets 
+$$U = \bigcup_{a \in A} B(a, \epsilon_{a}/2)$$
+and 
+$$V = \bigcup_{b \in B} B(b, \epsilon_{b}/2)$$
+are disjoint and contain $A$ and $B$, respectively.
+
+\subsection{Theorem.} A compact Hausdorff space is normal.
+
+\subsection{Proof.} Let $X$ be a compact Hausdorff space. Let $A$ and $B$ be disjoint closed subsets of $X$. For each $x \in A$, choose disjoint neighborhoods $U_{x}$ and $V_{x}$ of $x$ and $B$, respectively. The collection $\{U_{x}\}$ is an open cover of $A$, so there exists a finite subcover $U_{1}, \ldots, U_{n}$. It follows that the sets 
+$$U = \bigcup_{i=1}^{n} U_{i}$$
+and 
+$$V = \bigcap_{i=1}^{n} V_{i}$$
+are disjoint neighborhoods of $A$ and $B$, respectively.
+
+\subsection{Theorem.} Every well-ordered set is normal in the order topology.
+
+\subsection{Proof.} First observe that any interval $(x, y]$ is open, for if $y$ is not the maximum element, then $(x, y] = (x, y')$ where $y'$ is the immediate successor of $y$. Let $A$ and $B$ be disjoint closed sets in $X$.
+
+Assume that neither $A$ nor $B$ contains the minimum element $a_{0}$ of $X$. For each $a \in A$, choose a neighborhood $(x_{a}, a]$ disjoint from $B$. For each $b \in B$, choose a neighborhood $(y_{b}, b]$ disjoint from $A$. The sets
+$$U = \bigcup_{a \in A} (x_{a}, a]$$
+and 
+$$V = \bigcup_{b \in B} (y_{b}, b]$$
+are disjoint open sets containing $A$ and $B$, respectively. Indeed, if $z \in U \cap V$, then $z \in (x_{a}, a] \cap (y_{b}, b]$ for some $a \in A$ and $b \in B$. Without loss of generality, assume that $a < b$. If $a \leq y_{b}$, then the intervals are disjoint. If $a > y_{b}$, then $(y_{b}, b]$ is not disjoint from $A$, a contradiction.
+
+If $A$ contains $a_{0}$, then the set $A - \{a_{0}\}$ is closed and disjoint from $B$, so it admits disjoint open intervals $U$ and $V$ of $A - \{a_{0}\}$ and $B$, respectively. Now the sets $U \cup \{a_{0}\}$ and $V$ are disjoint neighborhoods of $A$ and $B$, respectively.
+
+\subsection{Remark.} Indeed, every ordered set is normal in the order topology.
+
+\subsection{Example.} If $J$ is uncountable, then the product space $\R^{J}$ is not normal. So the product of normal spaces need not be normal. Nor does the subspace of a normal space need be normal (for $\R^{J}$ is homeomorphic to a subspace of $[0, 1]^{J}$).
+
+\subsection{Example.} The product space $S_{\Omega} \times \overline{S_{\Omega}}$ is not normal. So the product of normal spaces need not be normal. Nor does the subspace of a normal space need be normal (for $overline{S_{\Omega}} \times \overline{S_{\Omega}}$ compact Hasudorff and therefore normal).
+
+\subsection{Lemma.} (Urysohn Lemma) Let $X$ be a normal space. Let $A$ and $B$ be disjoint closed subsets of $X$. THen there exists a continuous map $f: X \to [0, 1]$ such that $f(x) = 0$ for all $x \in A$ and $f(x) = 1$ for all $x \in B$.
+
+\subsection{Proof.} TODO
+
+\subsection{Definition.} If $A$ and $B$ are two subsets of $X$, and if there exists a continuous function $f: X \to [0, 1]$ such that $f(x) = 0$ for all $x \in A$ and $f(x) = 1$ for all $x \in B$, then we say that $A$ and $B$ are separated by a continuous function.
+
+\subsection{Remark.} The Urysohn lemma says that if every pair $A$ and $B$ of disjoint closed subsets can be separated by open sets, then they can be separated by a continuous function. The converse is trivial.
+
+\subsection{Definition.} A space $X$ is said to be completely regular if it is $T_{1}$ and if for every $x_{0} \in X$ and every closed set $A$ that does not contain $x_{0}$, there exists a continuous function $f: X \to [0, 1]$ such that $f(x_{0}) = 0$ and $f(x) = 1$ for all $x \in A$.
+
+\subsection{Remark.} Complete regularity is also known as $T_{3+1/2}$.
+
+\subsection{Theorem.}
+
+(a) A subspace of a completely regular space is completely regular.
+
+(b) A product of completely regular spaces is completely regular.
+
+\subsection{Proof.}
+
+(a) Let $X$ be completely regular and let $Y$ be a subspace of $X$. Let $x_{0} \in Y$ and let $A$ be a closed subset of $Y$ that does not contain $x_{0}$. Then $A = \overline{A} \cap Y$, where $\overline{A}$ is the closure of $A$ in $X$, and moreoever, $x_{0} \not\in \overline{A}$. There exists a continuous function $f: X \to [0, 1]$ such that $f(x_{0}) = 0$ and $f(x) = 1$ for all $x \in \overline{A}$. Then $f \mid Y$ is a continuous function from $Y$ to $[0, 1]$ such that $f(x_{0}) = 0$ and $f(x) = 1$ for all $x \in A$.
+
+(b) Let $X$ be the product of completely regular spaces $\{X_{\alpha}\}$. Let $b \in X$ and let $A$ be a closed set of $X$ that does not contain $b$. Choose a basic neighborhood $U$ of $b$, and denote $U_{1}, \ldots, U_{n}$ the basic neighborhoods of $b_{\alpha}$ in $X_{\alpha}$ that are not all of $X_{\alpha}$. For each $U_{i}$, choose a continuous function $f_{i}: X_{\alpha} \to [0, 1]$ such that $f_{i}(b_{\alpha}) = 0$ and $f_{i}(x) = 1$ for all $x \in A$. The function $f: X \to [0, 1]$ defined by 
+$$f(x) = \prod_{i=1}^{n} f_{i}(x_{\alpha})$$
+is continuous and satisfies the desired properties.
+
+\subsection{Theorem.} (Urysohn Metrization Theorem) A regular space with a countable basis is metrizable.
+
+\subsection{Proof.} TODO
+
+\subsection{Theorem.} (Embedding Theorem) Let $X$ be a a $T_{1}$ space. Suppose that $\{f_{\alpha}\}$ is a family of continuous functions indexed for $\alpha \in J$. If $f_{\alpha}: X \to \R$ satisfying the requirement that for each point $x_{0} \in X$ and each neighborhood $U$ of $x_{0}$, there is an index $\alpha$ such that $f_{\alpha}(x_{0}) > 0$ and $f_{\alpha}(x) = 0$ for all $x \not\in U$. Then the function $F: X \to \R^{J}$ defined by 
+$$F(x) = \prod_{\alpha \in J} f_{\alpha}(x)$$
+is an imbedding of $X$ in $\R^{J}$. If $f_{\alpha}$ maps $X$ into $[0, 1]$, then $F$ is an imbedding of $X$ in $[0, 1]^{J}$.
+
+\subsection{Proof.} TODO
+
+\subsection{Theorem.} A space $X$ is completely regular if and only if it is homeomorphic to a subspace of $[0, 1]^{J}$ for some $J$.
+
+\subsection{Theorem.} (Tietze Extension Theorem) Let $X$ be a normal space. Let $A$ be a closed subspace of $X$. Any continuous map of $A$ into $[0, 1]$ or $A$ into $\R$ can be extended to a continuous map of $X$ into $[0, 1]$ or $\R$, respectively.
+
+\subsection{Proof.} TODO
+
+\newpage \newsection{Fundamental Group.}
+
+\subsection{Section.} Fundamental Group.
+
+\subsection{Definition.} If $f$ and $f'$ are continuous maps of $X$ into $Y$, we say that $f$ is homotopic to $f'$ if there exists a continuous map $F: X \times I \to Y$ such that $F(x, 0) = f(x)$ and $F(x, 1) = f'(x)$ for all $x \in X$. We denote $f \simeq f'$ and call $F$ a homotopy between $f$ and $f'$.
+
+\subsection{Definition.} If $f \simeq f'$ and $f'$ is a constant map, then we say that $f$ is nullhomotopic.
+
+\subsection{Definition.} If $f$ and $f'$ are paths in $X$ with initial point $x_{0}$ and final point $x_{1}$, then we say that $f$ is path homotopic to $f'$ if there exists a continuous map $F: I \times I \to X$ such that $F(x, 0) = f(x)$ and $F(x, 1) = f'(x)$ for all $x \in I$ and $F(0, t) = x_{0}$ and $F(1, t) = x_{1}$ for all $t \in I$. We denote $f \simeq_{p} f'$ and call $F$ a path homotopy between $f$ and $f'$.
+
+\subsection{Lemma} The relations $\simeq$ and $\simeq_{p}$ are equivalence relations.
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Definition.} Denote $[f]$ the equivalence class of $f$ under the relation $\simeq_{p}$. $[f]$ is called the path homotopy class of $f$.
+
+\subsection{Example.} If $A$ is a convex subspace of $\R^{n}$, then any two paths in $A$ with the same endpoints are homotopic. For the straihgt-line homotopy 
+$$F(x, t) = (1 - t)f(x) + tf'(x)$$
+is a homotopy between $f$ and $f'$.
+
+\subsection{Definition.} If $f$ is a path in $X$ from $x_{0}$ to $x_{1}$ and $g$ is a path in $X$ from $x_{1}$ to $x_{2}$, then the product $h = f * g$ is defined as 
+$$h(s) = \begin{cases}
+f(2s) & \text{if } s \in [0, 1/2] \\
+g(2s - 1) & \text{if } s \in [1/2, 1].
+\end{cases}$$
+
+\subsection{Definition.} The product between path-homotopy classes is defined as $[f] * [g] = [f * g]$. Indeed, let $F$ be a path homotopy between $f$ and $f'$ and let $G$ be a path homotpy between $g$ and $g'$. Define 
+$$H(s, t) = \begin{cases}
+    F(2s, t) & \text{if } s \in [0, 1/2] \\
+    G(2s - 1, t) & \text{if } s \in [1/2, 1].
+\end{cases}$$
+
+\subsection{Lemma.} If $k: X \to Y$ is a continuous map and if $F$ is a path homotopy in $X$ between $f$ and $f'$, then $k \circ F$ is a path homotopy in $Y$ between $k \circ f$ and $k \circ f'$.
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Lemma.} If $k: X \to Y$ is a continuous map and if $f$ and $g$ are paths in $X$ such that $f(1) = g(0)$, then 
+$$k \circ (f * g) = (k \circ f) * (k \circ g).$$
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Theorem.} The operation $*$ satisfies the following properties.
+
+(a) (Associativity) $[f] * ([g] * [h]) = ([f] * [g]) * [h]$ whenever the products are defined.
+
+(b) (Identity) Let $e_{x}$ denote the constant path at point $x$. If $f$ is a path from $x_{0}$ to $x_{1}$, then $[f] * [e_{x_{1}}] = [f]$ and $[e_{x_{0}}] * [f] = [f]$.
+
+(c) (Inverse) If $f$ is a path from $x_{0}$ to $x_{1}$, then let its reverse $\overline{f}$ be defined as $\overline{f}(s) = f(1 - s)$ for $s \in I$. Then $[f] * [\overline{f}] = [e_{x_{0}}]$ and $[\overline{f}] * [f] = [e_{x_{1}}]$.
+
+\subsection{Proof.}
+
+(a) Let $[a, b]$ and $[c, d]$ be two intervals in $I$. There exists an unique continuous map $p: [a, b] \to [c, d]$ of the form $p(x) = mx + k$ called the positive linear map. The inverse of a positive linear map is a positive linear map, and the composition of two positive linear maps is a positive linear map.
+
+When the triple product $f * g * h$ is defined, it is the path $k_{ab}$ in $X$ where on $[0, a]$, it is the positive linear map of $[0, a]$ to $[0, 1]$ followed by $f$ and similarly for $[a, b]$ and $[b, 1]$. The path homotopy class of $k_{ab}$ is independent of the choice of $a$ and $b$. Indeed, $[f] * ([g] * [h])$ is the path homotopy class of $k_{ab}$ where $a = 1/2$ and $b = 3/4$ whille $([f] * [g]) * [h]$ is the path homotopy class of $k_{ab}$ where $a = 1/4$ and $b = 1/2$. These are equivalent.
+
+(b) Let $e_{0}$ denote the constant path in $I$ at $0$ and let $i$ denote the identity path in $I$. Then $e_{0} * i$ is a path in $I$ from $0$ to $1$. $I$ is convex, so there is a path homotopy $G$ between $i$ and $e_{0}*i$, so $f \circ G$ is a path homotopy between $f \circ i = f$ and 
+$$f \circ (e_{0} * i) = (f \circ e_{0}) * (f \circ i) = e_{x_{0}} * f.$$
+The proof for right identity is entirely similar.
+
+(c) Let $i$ denote the identity path in $I$ and $\overline{i}$ denote its reverse. $I$ is convex, so there is a path homotopy $H$ between $e_{0}$ and $i * \overline{i}$. Then $f \circ H$ is a path homotopy between $f \circ e_{0} = e_{x_{0}}$ and 
+$$f \circ (i * \overline{i}) = (f \circ i) * (f \circ \overline{i}) = f * \overline{f}.$$
+The proof for left inverse is entirely similar.
+
+\subsection{Theorem.} Let $f$ be a path in $X$. Let $a_{0}, \ldots, a_{n}$ such that that $0 < a_{0} < \ldots < a_{n} < 1$. Let $f_{i}$ be the path in $X$ defined as the positive linear map of $I$ to $[a_{i-1}, a_{i}]$ followed by $f$. Then 
+$$[f] = [f_{1}] * \ldots * [f_{n}].$$
+
+\subsection{Proof.} The proof is sketched in Proof 2.15a.
+
+\subsection{Definition.} Let $G$ and $G'$ be two groups with the operation $\cdot$. A homomorphism $f: G \to G'$ is such that 
+$$f(x \cdot y) = f(x) \cdot f(y)$$
+for all $x, y \in G$. $f$ satisfies $f(e) = e'$ and $f(x^{-1}) = f(x)^{-1}$ for all $x \in G$.
+
+\subsection{Definition.} The kernel of $f$ is the set $f^{-1}(e')$. It is a subgroup of $G$.
+
+\subsection{Definition.} The image of $f$ is the set $f(G)$. It is a subgroup of $G'$.
+
+\subsection{Definition.} A homomorphism is called a monomorphism if it is injective (or equivalently of $f^{-1}(e') = e$). It is called an epimorphism if it is surjective. It is called an isomorphism if it is bijective.
+
+\subsection{Definition.} Let $H$ be a subgroup of $G$. Let $xH$ denote the set of products $xh$ for all $h \in H$. It is called the left coset of $H$ in $G$, and the collection of all such $xH$ for $x \in G$ is a partition of $G$. Similarly, let $Hx$ denote the right coset of $H$ in $G$.
+
+\subsection{Definition.} $H$ is said to be a normal subgroup of $G$ if $xhx^{-1} \in H$ for all $x \in G$ and $h \in H$. In this case, $xH = Hx$ for all $x \in G$. The partition $G/H$ is called the quotient group of $G$ by $H$ with the operation $(xH)(yH) = xyH.$
+
+\subsection{Defintion.} The map $f: G \to G/H$ defined by $f(x) = xH$ is epimorphism with kernel $H$. Conversely, if $f: G \to G'$ is an epimorphism and $N$ is a normal subgroup of $G$, then $f$ induces an isomorphism $g: G/N \to G'$ defined by $g(xN) = f(x)$.
+
+\subsection{Definition.} If $H$ is not normal, then $G/H$ denotes the collection of right cosets of $H$ in $G$.
+
+\subsection{Definition.} Let $X$ be a topological space and let $x_{0} \in X$. The fundamental group $\pi_{1}(X, x_{0})$ relative to the base point $x_{0}$ is the group of path homotopy classes of loops in $X$ based at $x_{0}$ with the operation $*$.
+
+\subsection{Example.} Any convex subspace of $\R^{n}$ has a trivial fundamental group.
+
+\subsection{Definition.} Let $\alpha$ be a path in $X$ from $x_{0}$ to $x_{1}$. Define the map $\hat{\alpha}: \pi_{1}(X, x_{0}) \to \pi_{1}(X, x_{1})$
+by 
+$$\hat{\alpha}([f]) = [\overline{\alpha}] * [f] * [\alpha].$$
+If $f$ is a loop at $x_{0}$, then $\overline{\alpha} * f * \alpha$ is a lopo at $x_{1}$.
+
+\subsection{Theorem.} The map $\hat{\alpha}$ is an isomorphism of $\pi_{1}(X, x_{0})$ and $\pi_{1}(X, x_{1})$.
+
+\subsection{Proof.} We compute that 
+\begin{align*}
+    \hat{\alpha}([f]) * \hat{\alpha}([g]) &= [\overline{\alpha}] * [f] * [\alpha] * [\overline{\alpha}] * [g] * [\alpha] \\
+                                          &= [\overline{\alpha}] * ([f] * [g]) * [\alpha] \\
+                                          &= \hat{\alpha}([f] * [g]),
+\end{align*}
+so $\hat{\alpha}$ is a homomorphism. We show that $\hat{\alpha}$ has a left inverse and a right inverse. Let $\beta = \overline{\alpha}$. Then 
+\begin{align*}
+    \hat{\beta}(\hat{\alpha}([f])) &= [\overline{\beta}] * ([\overline{\alpha}] * [f] * [\alpha]) * [\beta] \\
+                                   &= [e_{x_{0}}] * [f] * [e_{x_{1}}] \\
+                                   &= [f]
+\end{align*}
+for all $[f] \in \pi_{1}(X, x_{0})$. A similar computation shows that $\hat{\beta}$ is also a right inverse of $\hat{\alpha}$. So $\hat{\alpha}$ is an isomorphism.
+
+\subsection{Corollary.} If $X$ is path connected and $x_{0}, x_{1} \in X$, then $\pi_{1}(X, x_{0})$ is isomorphic to $\pi_{1}(X, x_{1})$.
+
+\subsection{Proof.} The proof is trivial.
+
+\subsection{Remark.} We must still specify the base point $x_{0}$ in the definition of the fundamental group, for the isomorphism $\hat{\alpha}$ depends on the choice of $\alpha$.
+
+\subsection{Definition.} A space $X$ is said to be simply connected if it is path connected and $\pi_{1}(X, x_{0})$ is trivial for one (and hence all) $x_{0} \in X$.
+
+\subsection{Lemma.} If $X$ is simply connected, then any two paths in $X$ with the same endpoints are path homotopic.
+
+\subsection{Proof.} Let $\alpha$ and $\beta$ be two paths in $X$ from $x_{0}$ to $x_{1}$. We compute that 
+\begin{align*}
+    [\alpha] &= [\alpha] * [\overline{\beta}] * [\beta] \\
+             &= [\alpha * \overline{\beta}] * [\beta] \\
+             &= [e_{x_{0}}] * [\beta] \\
+             &= [\beta].
+\end{align*}
+
+\subsection{Definition.} Let $h: (X, x_{0}) \to (Y, y_{0})$ be a continuous map. The homomorphism $h_{*}: \pi_{1}(X, x_{0}) \to \pi_{1}(Y, y_{0})$ induced by $h$, relative to base point $x_{0}$, is defined as 
+$$h_{*}([f]) = [h \circ f].$$
+$h_{*}$ is a homomorphism because 
+$$h \circ (f * g) = (h \circ f) * (h \circ g).$$
+$h_{*}$ depends on the choice of $x_{0}$, so we denote $(h_{x_{0}})_{*}$ when necessary.
+
+\subsection{Theorem.} If $i: (X, x_{0}) \to (X, x_{0})$ is the identity map, then $i_{*}$ is the identity homomorphism of $\pi_{1}(X, x_{0})$.
+
+\subsection{Proof.} We compute that 
+\begin{align*}
+    i_{*}([f]) &= [i \circ f] \\
+               &= [f].
+\end{align*}
+
+\subsection{Theorem.} If $h: (X, x_{0}) \to (Y, y_{0})$ and $k: (Y, y_{0}) \to (Z, z_{0})$ are continuous maps, then 
+$$(k \circ h)_{*} = k_{*} \circ h_{*}.$$
+
+\subsection{Proof.} We compute that 
+\begin{align*}
+    (k \circ h)_{*}([f]) &= [(k \circ h) \circ f] \\
+                         &= [k \circ (h \circ f)] \\
+                         &= k_{*}([h \circ f]) \\
+                         &= (k_{*} \circ h_{*})([f]).
+\end{align*}
+
+\subsection{Corollary.} If $h: (X, x_{0}) \to (Y, y_{0})$ is a homeomorphism, then $h_{*}$ is an isomorphism of $\pi_{1}(X, x_{0})$ and $\pi_{1}(Y, y_{0})$.
+
+\subsection{Proof.} Let $k$ be the inverse of $h$. Then $(k \circ h)_{*} = i_{*}$ is the identity homomorphism of $\pi_{1}(X, x_{0})$, and $(h \circ k)_{*} = j_{*}$ is the identity homomorphism of $\pi_{1}(Y, y_{0})$. So $h_{*}$ is an isomorphism.
+
+\subsection{Definition.} Let $p: E \to B$ be a continuous surjective map. An open set $U$ of $B$ is said to be evenly covered by $p$ if $p^{-1}(U)$ is a disjoint union of open sets $\{V_{\alpha}\}$ such that $p \mid V_{\alpha}$ is a homeomorphism onto $U$ for each $\alpha$. The collection $\{V_{\alpha}\}$ is a partition of $p^{-1}(U)$ into slices.
+
+\subsection{Definition.} Let $p: E \to B$ be a continuous surjective map. If each point $b \in B$ has a neighborhood $U$ that is evenly covered by $p$, then $p$ is said to be a covering map and $E$ is said to be a covering space of $B$.
+
+\subsection{Definition.} A map $p: E \to B$ is a local homeomorphism if for every point $e \in E$ has a neighborhood $U$ that is homeomorphic to a neighborhood of $p(e)$ in $B$. A covering map is a local homeomorphism, but the converse does not hold necessarily.
+
+\subsection{Example.}
+
+\subsection{Theorem.} The map $p: \R \to S^{1}$ defined by $p(x) = (\cos 2\pi x, \sin 2\pi x)$ is a covering map.
+
+\subsection{Proof.} Let $U$ be the subset of $S^{1}$ consisting of points with positive first coordinate, i.e., the open right semicircle. The preimage $p^{-1}(U)$ is the union of the open intervals $V_{n} = (n-1/4, n+1/4)$ for $n \in \Z$. The restriction $p \mid V_{n}$ is injective because $\sin \mid V_{n}$ is strictly monotonic, and it is surjective by the intermediate value theorem. $p \mid V_{n}$ is a continuous bijective map between a compact space and a Hausdorff space, so it is a homeomorphism of $V_{n}$ and $U$, so $U$ is evenly covered by $p$. A similar argument can be made for the left, upper, and lower semicircles. Thesse semicircles form an open cover of $S^{1}$, and each one is evenly covered by $p$, so $p$ is a covering map.
+
+\end{document}
