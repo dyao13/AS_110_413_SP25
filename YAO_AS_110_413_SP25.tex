@@ -12,6 +12,10 @@
 
 \subsection{Section.} Introduction.
 
+\newpage \newsection{Connectedness and Compactness.}
+
+\subsection{Section.} Connectedness and Compactness.
+
 \newpage \newsection{Countability and Separation Axioms.}
 
 \subsection{Section.} Countability and Separation Axioms.
@@ -130,7 +134,7 @@ Let $\{B_{n}\}$ be a countable basis for $X$. For each $n$, choose an $x_{n} \in
 
 (c) Let $X$ be regular and let $Y$ be a subspace of $X$. Let $x \in Y$ and let $B$ be a closed subset of $Y$ that does not contain $x$. Let $\overline{B}$ be the closure of $B$ in $X$. Then $\overline{B} \cap Y = B$, so $x \not\in \overline{B}$. By the regularity of $X$, the exist disjoint neighborhoods $U$ and $V$ of $x$ and $\overline{B}$, respectively, in $X$. Then $U \cap Y$ and $V \cap Y$ are disjoint neighborhoods of $x$ and $B$, respectively, in $Y$.
 
-(d) Let $\{X_{\alpha}\}$ be a collection of regular spaces and let $X$ be the product space. It follows immediately that $X$ is $T_{1}$ by theorem 1.36a. Let $x \in X$ have the neighborhood $U$ equals the product of $U_{\alpha}$. For each $U_{\alpha}$, let $V_{\alpha}$ be a neighborhood of $x_{\alpha}$ such that $\overline{V_{\alpha}} \subseteq U_{\alpha}$ by Lemma 1.32. If $U_{\alpha} = X_{\alpha}$, then let $V_{\alpha} = X_{\alpha}$. Let $V$ be the product of $V_{\alpha}$. Then $\overline{V} \subseteq U$, so $X$ is regular.
+(d) Let $\{X_{\alpha}\}$ be a collection of regular spaces and let $X$ be the product space. It follows immediately that $X$ is $T_{1}$ by Theorem 2.36a. Let $x \in X$ have the neighborhood $U$ equals the product of $U_{\alpha}$. For each $U_{\alpha}$, let $V_{\alpha}$ be a neighborhood of $x_{\alpha}$ such that $\overline{V_{\alpha}} \subseteq U_{\alpha}$ by Lemma 2.32. If $U_{\alpha} = X_{\alpha}$, then let $V_{\alpha} = X_{\alpha}$. Let $V$ be the product of $V_{\alpha}$. Then $\overline{V} \subseteq U$, so $X$ is regular.
 
 \subsection{Example.} $\R_{K}$ is Hausdorff but not regular.
 
@@ -188,7 +192,7 @@ If $A$ contains $a_{0}$, then the set $A - \{a_{0}\}$ is closed and disjoint fro
 
 \subsection{Lemma.} (Urysohn Lemma) Let $X$ be a normal space. Let $A$ and $B$ be disjoint closed subsets of $X$. THen there exists a continuous map $f: X \to [0, 1]$ such that $f(x) = 0$ for all $x \in A$ and $f(x) = 1$ for all $x \in B$.
 
-\subsection{Proof.} TODO
+\subsection{Proof.} TODO!
 
 \subsection{Definition.} If $A$ and $B$ are two subsets of $X$, and if there exists a continuous function $f: X \to [0, 1]$ such that $f(x) = 0$ for all $x \in A$ and $f(x) = 1$ for all $x \in B$, then we say that $A$ and $B$ are separated by a continuous function.
 
@@ -214,19 +218,19 @@ is continuous and satisfies the desired properties.
 
 \subsection{Theorem.} (Urysohn Metrization Theorem) A regular space with a countable basis is metrizable.
 
-\subsection{Proof.} TODO
+\subsection{Proof.} TODO!
 
 \subsection{Theorem.} (Embedding Theorem) Let $X$ be a a $T_{1}$ space. Suppose that $\{f_{\alpha}\}$ is a family of continuous functions indexed for $\alpha \in J$. If $f_{\alpha}: X \to \R$ satisfying the requirement that for each point $x_{0} \in X$ and each neighborhood $U$ of $x_{0}$, there is an index $\alpha$ such that $f_{\alpha}(x_{0}) > 0$ and $f_{\alpha}(x) = 0$ for all $x \not\in U$. Then the function $F: X \to \R^{J}$ defined by 
 $$F(x) = \prod_{\alpha \in J} f_{\alpha}(x)$$
 is an imbedding of $X$ in $\R^{J}$. If $f_{\alpha}$ maps $X$ into $[0, 1]$, then $F$ is an imbedding of $X$ in $[0, 1]^{J}$.
 
-\subsection{Proof.} TODO
+\subsection{Proof.} TODO!
 
 \subsection{Theorem.} A space $X$ is completely regular if and only if it is homeomorphic to a subspace of $[0, 1]^{J}$ for some $J$.
 
 \subsection{Theorem.} (Tietze Extension Theorem) Let $X$ be a normal space. Let $A$ be a closed subspace of $X$. Any continuous map of $A$ into $[0, 1]$ or $A$ into $\R$ can be extended to a continuous map of $X$ into $[0, 1]$ or $\R$, respectively.
 
-\subsection{Proof.} TODO
+\subsection{Proof.} TODO!
 
 \newpage \newsection{Fundamental Group.}
 
@@ -294,7 +298,7 @@ The proof for left inverse is entirely similar.
 \subsection{Theorem.} Let $f$ be a path in $X$. Let $a_{0}, \ldots, a_{n}$ such that that $0 < a_{0} < \ldots < a_{n} < 1$. Let $f_{i}$ be the path in $X$ defined as the positive linear map of $I$ to $[a_{i-1}, a_{i}]$ followed by $f$. Then 
 $$[f] = [f_{1}] * \ldots * [f_{n}].$$
 
-\subsection{Proof.} The proof is sketched in Proof 2.15a.
+\subsection{Proof.} The proof is sketched in Proof 3.15a.
 
 \subsection{Definition.} Let $G$ and $G'$ be two groups with the operation $\cdot$. A homomorphism $f: G \to G'$ is such that 
 $$f(x \cdot y) = f(x) \cdot f(y)$$
@@ -321,7 +325,7 @@ for all $x, y \in G$. $f$ satisfies $f(e) = e'$ and $f(x^{-1}) = f(x)^{-1}$ for 
 \subsection{Definition.} Let $\alpha$ be a path in $X$ from $x_{0}$ to $x_{1}$. Define the map $\hat{\alpha}: \pi_{1}(X, x_{0}) \to \pi_{1}(X, x_{1})$
 by 
 $$\hat{\alpha}([f]) = [\overline{\alpha}] * [f] * [\alpha].$$
-If $f$ is a loop at $x_{0}$, then $\overline{\alpha} * f * \alpha$ is a lopo at $x_{1}$.
+If $f$ is a loop at $x_{0}$, then $\overline{\alpha} * f * \alpha$ is a loop at $x_{1}$.
 
 \subsection{Theorem.} The map $\hat{\alpha}$ is an isomorphism of $\pi_{1}(X, x_{0})$ and $\pi_{1}(X, x_{1})$.
 
@@ -392,10 +396,153 @@ $$(k \circ h)_{*} = k_{*} \circ h_{*}.$$
 
 \subsection{Definition.} A map $p: E \to B$ is a local homeomorphism if for every point $e \in E$ has a neighborhood $U$ that is homeomorphic to a neighborhood of $p(e)$ in $B$. A covering map is a local homeomorphism, but the converse does not hold necessarily.
 
-\subsection{Example.}
+\subsection{Example.} The map $p: \R_{+} \to \S^{1}$ defined by $p(x) = (\cos 2\pi x, \sin 2\pi x)$ is surjective and a local homomorphism, but it is not a coverign map. For the point $b_{0} = (1, 0)$ has no neighborhood $U$ that is evenly covered by $p$. This example also shows that the restriction of a covering map need not be a covering map.
 
 \subsection{Theorem.} The map $p: \R \to S^{1}$ defined by $p(x) = (\cos 2\pi x, \sin 2\pi x)$ is a covering map.
 
 \subsection{Proof.} Let $U$ be the subset of $S^{1}$ consisting of points with positive first coordinate, i.e., the open right semicircle. The preimage $p^{-1}(U)$ is the union of the open intervals $V_{n} = (n-1/4, n+1/4)$ for $n \in \Z$. The restriction $p \mid V_{n}$ is injective because $\sin \mid V_{n}$ is strictly monotonic, and it is surjective by the intermediate value theorem. $p \mid V_{n}$ is a continuous bijective map between a compact space and a Hausdorff space, so it is a homeomorphism of $V_{n}$ and $U$, so $U$ is evenly covered by $p$. A similar argument can be made for the left, upper, and lower semicircles. Thesse semicircles form an open cover of $S^{1}$, and each one is evenly covered by $p$, so $p$ is a covering map.
+
+\subsection{Theorem.} Let $p: E \to B$ be a covering map. If $B_{0}$ is a subspace of $B$, and if $E_{0} = p^{-1}(B_{0})$, then the map $p_{0}: E_{0} \to B_{0}$ is a covering map, where $p_{0}$ is the restriction of $p$ to $E_{0}$.
+
+\subsection{Proof.} Let $b_{0} \in B_{0}$. Let $U$ be a neighborhood of $b_{0}$ in $B$ that is evenly covered by $p$. Let $\{V_{\alpha}\}$ be a partion of $p^{-1}(U)$ into slices. Then $U \cap B_{0}$ is a neighborhood of $b_{0}$ in $B_{0}$, and the sets $\{V_{\alpha} \cap E_{0}\}$ are a partition of $p_{0}^{-1}(U \cap B_{0})$ into slices.
+
+\subsection{Theorem.} If $p: E \to B$ and $p'L E' \to B'$ are covering maps, then 
+$p \times p': E \times E' \to B \times B'$ is a covering map.
+
+\subsection{Proof.} Given $b \in B$ and $b' \in B'$, let $U$ and $U'$ be neighborhoods of $b$ and $b'$, respectively, that are evenly covered by $p$ and $p$', respectively. Let $\{V_{\alpha}\}$ and $\{V_{\beta}'\}$ be partitions of $p^{-1}(U)$ and $(p')^{-1}(U')$ into slices. Then the preimage of $U \times U'$ is the union of all the sets $V_{\alpha} \times V_{\beta}'$. These are disjoint open sets in $E \times E'$, and each is mapped homeomorphically onto $U \times U'$ by $p \times p'$. So $p \times p'$ is a covering map.
+
+\subsection{Example.} Let $T = S^{1} \times S^{1}$ be the torus. The map $p \times p: R^{2} \to T$ is a covering map, where $p$ is the covering map $p: \R to S^{1}$ of Theorem 3.48. Intuitively, each unit square of $\R^{2}$ is mapped homeomorphically onto a unit disk of $T$.
+
+\subsection{Example.} Let $p \times p: \R^{2} \to T$ be the covering map of the previous example. Let $b_{0} = p(0)$, and let $B_{0}$ denote the figure-eight 
+$$B_{0} = (S^{1} \times b_{0}) \cup (b_{0} \times S^{1}).$$
+The preimage of $B_{0}$ is 
+$$E_{0} = (\R \times \Z) \cup (\Z \times \R),$$
+and the map $P_{0}: E_{0} \to B_{0}$ obtained by restricting $p \times p$ is a covering map.
+
+\subsection{Example.} Let $p: \R \to S^{1}$ be the covering map of Theorem 3.48. Let $p \times i: R \times R_{+} \to S^{1} \times R_{+}$ be a covering map, where $i$ is the identity map of $R_{+}$. Let $x \times t \mapsto tx$ be a homeomorphism of $S^{1} \times R_{+}$ with $R^{2} \setminus \{0\}$. The composition yields a covering map $\R \times R_{+} \to R^{2} \setminus \{0\}$.
+
+\subsection{Definition.} Let $p: E \to B$ be a map. If $f: X \to B$ is continuous, a lifting of $f$ is a map $\tilde{f}: X \to E$ such that $p \circ \tilde{f} = f$.
+
+\subsection{Example.} Let $p: \R \to S^{1}$ be the covering map of Theorem 3.48. The path $f: I \to S^{1}$ defined by $f(t) = (\cos 2\pi ft, \sin 2\pi ft)$ lifts to the path $\tilde{f}: I \to \R$ defined by $\tilde{f}(t) = ft$.
+
+\subsection{Lemma.} Let $p: E \to B$ be a covering map. Let $p_{e_{0}} = b_{0}$. Any path $f: I \to B$ beginning at $b_{0}$ has a unique lifting to a path $\tilde{f}: I \to E$ beginning at $e_{0}$.
+
+\subsection{Proof.} Cover $B$ by open sets $U$ each of which is evenly covered by $p$.  Find a subdivision of $I$, say $s_{0}, \ldots, s_{n}$ such that every $f([s_{i}, s_{i+1}])$ lies in a $U$. (Use the Lebesgue number lemma.)
+
+Define $\tilde{f}(0) = e_{0}$. Suppose that $\tilde{f}(s)$ is defined for $0 \leq s \leq s_{i}$. Define $\tilde{f}$ on $[s_{i}, s_{i+1}]$ as follows. The set $f([s_{i}, s_{i+1}])$ is contained in a $U$ that is evenly covered by $p$. Let $\{V_{\alpha}\}$ be a partition of $p^{-1}(U)$ into slices. Now $\tilde{f}(s_{i})$ lies in one of these sets, say $V_{0}$. Define $\tilde{f}(s)$ for $s_{i} \leq s \leq s_{i+1}$ by 
+$$\tilde{f}(s) = (p \mid V_{0})^{-1}(f(s)).$$
+$p \mid V_{0}: V_{0} \to U$ is a homeomorphism, so $tilde{f}$ is continuous on $[s_{i}, s_{i+1}]$. Hence, $\tilde{f}$ may be defined on $I$ by induction. It is continuous by the pasting lemma, and $p \circ \tilde{f} = f$.
+
+Suppose that $\tilde{f}'$ is another lifting of $f$ beginning at $e_{0}$. Then $\tilde{f}'(0) = e_{0} = \tilde{f}(0)$. Suppose that $\tilde{f}'(s) = \tilde{f}(s)$ for all $0 \leq s \leq s_{i}$. By construction, $\tilde{f}'(s_{i})$ lies in the same slice $V_{0}$ as $\tilde{f}(s_{i})$. The map $p \mid V_{0}$ is a homeomorphism, so $\tilde{f}'(s_{i}) = \tilde{f}(s_{i})$. By induction, $\tilde{f}'(s) = \tilde{f}(s)$ for all $s \in I$, so the lifting is unique.
+
+\subsection{Lemma.} Let $p: E \to B$ be a covering map. Let $p_{e_{0}} = b_{0}$. Let $F: I \times I \to B$ be continuous, with $F(0, 0) = b_{0}$. There is a unique lifting of $F$ to a continuous map $\tilde{F}: I \times I \to E$ such that $\tilde{F}(0, 0) = e_{0}$. If $F$ is a path homotopy, then $\tilde{F}$ is a path homotopy.
+
+\subsection{Proof.} Given $F$, define $\tilde{F}(0, 0) = e_{0}$. Use Lemma 3.59 to define $\tilde{F}$ for $\{0\} \times I$ and for $I \times \{0\}$. Choose subdivisions $s_{0} < \ldots, < s_{m}$ and $t_{0} < \ldots < t_{n}$ small enough such that each rectangle $I_{i} \times J_{j} = [s_{i-1}, s_{i}] \times [t_{j-1}, t_{j}]$ is contained in an open set $U$ of $B$ that is evenly covered by $p$. (Use the Lebesgue number lemma.)
+
+Given $i_{0}$ and $j_{0}$, assume that $\tilde{F}$ is defined on $A$, the union of $\{0\} \times I$ and $I \times \{0\}$ and all the previous rectangles. Assume that $\tilde{F}$ is a continuous lifting of $F \mid A$. Choose an open set $U$ of $B$ that is evnely covered by $p$ and contains $F(I_{i_{0}} \times J_{j_{0}})$. Let $\{V_{\alpha}\}$ be a partition of $p^{-1}(U)$ into slices. Now $\tilde{F}$ is already defined on $C = A \cap (I_{i_{0}} \times J_{j_{0}})$, which is connected, so $\tilde{F}(C)$ is connected, so it must lie entirely in, say, $V_{0}$. Let $p_{0}: V_{0} \to U$ denote the restriction of $p$ to $V_{0}$. Since $\tilde{F}$ is a lifting of $F \mid A$, for $x \in C$, $p_{0}(\tilde{F}(x)) = p(\tilde{F}(x)) = F(x)$, so that $\tilde{F}(x) = p_{0}^{-1}(F(x))$. Define 
+$$\tilde{F}(x) = p_{0}^{1}(F(x))$$
+for $x \in I_{i_{0}} \times J_{j_{0}}$. The lifting $\tilde{F}$ may be defined on $I \times I$ by induction. It is continuous by the pasting lemma, and $p \circ \tilde{F} = F$. It is unique for the same reason as for Lemma 3.59.
+
+Suppose that $F$ is a path homotopy. The map $F$ carries $\{0\} \times I$ to $b_{0}$. Now $\tilde{F}$ is a lifting of $F$, so it carries this set to $p^{-1}(b_{0})$. But $p^{-1}(b_{0})$ has the discrete topology as a subspace of $E$. Since $\{0\} \times I$ is connected, $\tilde{F}(\{0\} \times I)$ is connected, so it must be a single point. So $\tilde{F}$ is a path homotopy.
+
+\subsection{Theorem.} Let $p: E \to B$ be a covering map. Let $p_{e_{0}} = b_{0}$. Let $f$ and $g$ be two paths in $B$ from $b_{0}$ to $b_{1}$ and let $\tilde{f}$ and $\tilde{g}$ denote their respective liftings to paths in $E$, beginiing at $e_{0}$. If $f$ and $g$ are path homotpic, then $\tilde{f}$ and $\tilde{g}$ end at the same point of $E$ and are path homotopic.
+
+\subsection{Proof.} Let $F: I \times I \to B$ be the path homotoy between $f$ and $g$. Then $F(0, 0) = b_{0}$. Let $\tilde{F}: I \times I \to E$ be the lifting of $F$ to $E$ such that $\tilde{F}(0, 0) = e_{0}$. By Lemma 3.61, $\tilde{F}$ is a path homotopy, so $\tilde{F}(\{0\} \times I) = \{e_{0}\}$ and $\tilde{F}(\{1\} \times I) = \{e_{1}\}$.
+
+The restriction $\tilde{F} \mid (I \times \{0\})$ is a path on $E$ from $e_{0}$ that is the lifting of $F \mid (I \times \{0\})$. By the uniqueness of path liftings, $\tilde{F}(s, 0) = \tilde{f}(s)$. Similarly, $\tilde{F}(s, 1) = \tilde{g}(s)$. So $\tilde{f}$ and $\tilde{g}$ both end at $e_{1}$, and $\tilde{F}$ is a path homotopy between them.
+
+\subsection{Definition.} Let $p: E \to B$ be a covering map. Let $b_{0} \in B$. Choose $e_{0}$ such that $p(e_{0}) = b_{0}$. Given an element $[f] \in \pi_{1}(B, b_{0})$, let $\tilde{f}$ be the lifting of $f$ to a path in $E$ that begins at $e_{0}$. Let $\phi([f])$ denote the end point $\tilde{f}(1)$ of $\tilde{f}$. Then $\phi: \pi_{1}(B, b_{0}) \to p^{-1}(b_{0})$ is a well-defined map. We call $\phi$ the lifting correspondence derived from the covering map $p$. It depends on the choice of $e_{0}$.
+
+\subsection{Theorem.} Let $p: E \to B$ be a covering map. Let $p(e_{0}) = b_{0}$. If $E$ is path connected, then the lifting correspondence $\phi: \pi_{1}(B, b_{0}) \to p^{-1}(b_{0})$ is surjective. If $E$ is simply connected, then $\phi$ is bijective.
+
+\subsection{Proof.} If $E$ is path connected, then, given $e_{1} \in p^{-1}(b_{0})$, there is a path $\tilde{f}$ from $e_{0}$ to $e_{1}$. Then $f = p \circ \tilde{f}$ is a loop in $B$ at $b_{0}$, and $\phi([f]) = e_{1}$. So $\phi$ is surjective.
+
+Suppose that $E$ is simply connected. Let $[f]$ and $[g]$be two elements of $\pi_{1}(B, b_{0})$ such that $\phi([f]) = \phi([g])$. Let $\tilde{f}$ and $\tilde{g}$ be the liftings of $f$ and $g$, respectively, to path sin $E$ that begin at $e_{0}$. Then $\tilde{f}(1) = \tilde{g}(1)$. Since $E$ is simply connected, there is a path homotpy $\tilde{F}$ in $E$ between $\tilde{f}$ and $\tilde{g}$. So $p \circ \tilde{F}$ is a path homopty in $B$ between $f$ and $g$. So $[f] = [g]$, and $\phi$ is injective.
+
+\subsection{Theorem.} The fundamental group of $S^{1}$ is isomorphic to $(\Z, +)$.
+
+\subsection{Proof.} Let $p: \R \to S^{1}$ be the covering map of Theorem 3.48. Let $e_{0} = 0$ and let $b_{0} = p(e_{0})$. Then $p^{-1}(b_{0}) = \Z$. Since $\R$ is simply connected, the lifting correspondence $\phi: \pi_{1}(S^{1}, b_{0}) \to p^{-1}(b_{0})$ is bijective. Indeed, $\phi$ is a homomorphism.
+
+Given $[f]$ and $[g]$ in $\pi_{1}(S^{1}, b_{0})$, let $\tilde{f}$ and $\tilde{g}$ be the liftings of $f$ and $g$, respectively. Let $m = \tilde{f}(1)$ and $n = \tilde{g}(1)$. So $\phi([f]) = m$ and $\phi([g]) = n$. Because $p(m + x) = p(x)$ for all $x \in \R$, 
+$$\tilde{g}'(s) = m + \tilde{g}(s)$$
+is the lifting of $g$ to $\R$ that begins at $m$. Then the product $\tilde{f} * \tilde{g}'$ is well-defined, and it is the lifting of $f * g$ to $\R$ that begins at $0$. The end point is $\tilde{g}' = m + n$. So $\phi([f] * [g]) = m + n$. so $\phi$ is a homomorphism and hence an isomorphism.
+
+\subsection{Definition.} Let $G$ be a group and let $x \in G$ have the inverse $x^{-1}$. If the set of all elements $x^{m}$ for $m \in \Z$ equals $G$, then $G$ is said to be a cyclic group with generator $x$. $|G|$ is said to be the order of $G$. $G$ has infinite order if and only if it is isomorphic to the additive group of integers. $G$ has order $k$ if and only if it is isomorphic to the group $\Z / k$ of integers modulo $k$.
+
+\subsection{Remark.} If $x$ is a generator of an inifite cyclic group $G$, and if $y$ is an element of an arbitrary group $H$, then there exists a unique homomorphism $h: G \to H$ such that $h(x) = y$ defined by $h(x^{n}) = y^{n}$ for all $n \in \Z$.
+
+\subsection{Theorem.} Let $p: E \to B$ be a covering map. Let $p(e_{0}) = b_{0}$.
+
+(a) The homomorphism $p_{*}: \pi_{1}(E, e_{0}) \to \pi_{1}(B, b_{0})$ is a monomorphism
+
+(b) Let $H = p_{*}(\pi_{1}(E, e_{0}))$. The lifting correspondence $\phi$ induces an injective map 
+$$\Phi: \pi_{1}(B, b_{0}) / H \to p^{-1}(b_{0})$$
+of the collection of right cosets of $H$ into $p^{-1}(b_{0})$, which is bijective if $E$ is path connected.
+
+(c) If $f$ is a loop in $B$ based at $b_{0}$, then $[f] \in H$ if and only if $f$ lifts to a loop in $E$ based at $e_{0}$.
+
+\subsection{Proof.}
+
+(a) Suppose that $\tilde{h}$ is a loop in $E$ baesd at $e_{0}$ and $p_{*}([\tilde{h}])$ is the identity element. Let $F$ be a path homotopy between $p \circ \tilde{h}$ and the constant loop. If $\tilde{F}$ is a lifting of $F$ to $E$ such that $\tilde{F}(0, 0) = e_{0}$, then $\tilde{F}$ is a path homotopy between $\tilde{h}$ and the constant loop at $e_{0}$.
+
+(b) Given loops $f$ and $g$ in $B$, let $\tilde{f}$ and $\tilde{g}$ be the liftings of them to $E$ that begin at $e_{0}$. Then $\phi([f]) = \tilde{f}(1)$ and $\phi([g]) = \tilde{g}(1)$. We show that $\phi([g]) = \phi([g])$ if and only if $[f] \in H * [g]$.
+
+Suppose that $[g] \in H * [g]$. Then $[g] = [h * g]$, where $h = p \circ \tilde{h}$ for some loop $\tilde{h}$ in $E$ based at $e_{0}$. Now the product $\tilde{h} * \tilde{g}$ is defined, and it is a lifting of $h * g$. Because $[f] = [h * g]$, the liftings $\tilde{f}$ and $\tilde{h} * \tilde{g}$ must end at the same point of $E$. So $\phi([f]) = \phi([g])$.
+
+Now suppose that $\phi([f]) = \phi([g])$. Then $\tilde{f}$ and $\tilde{g}$ end at the same point of $E$. The product of $\tilde{f}$ and the reverse of $\tilde{g}$ is a loop $\tilde{h}$ in $E$ based at $e_{0}$. By direct computation, $[\tilde{h} * \tilde{g}] = [\tilde{f}]$. If $\tilde{F}$ is a path homotopy in $E$ between the loops $\tilde{h} * \tilde{g}$ and $\tilde{f}$, then $p \circ \tilde{F}$ is a path homotopy in $B$ between $h * g$ and $f$, where $h = p \circ \tilde{h}$. Thus, $[f] \in H * [g]$ as desired.
+
+If $E$ is path connected, then $\phi$ is surjective, so $\Phi$ is surjective as well, and hence bijective.
+
+(c) Injectivity of $\Phi$ implies that $\phi([f]) = \phi([g])$ if and only if $[f] \in H * [g]$. Now $\phi[f] = e_{0}$ if and only if $[f] \in H * [e_{0}] = H$. But $\phi([f]) = e_{0}$ if and only if $f$ lifts to a loop in $E$ based at $e_{0}$.
+
+\subsection{Definition.} If $A \subseteq X$, a retraction of $X$ onto $A$ is a continuous map $r: X \to A$ such that $r \mid A$ is the identity map of $A$. If such an $r$ exists, then $A$ is said to be a retract of $X$.
+
+\subsection{Lemma.} If $A$ is a retract of $X$, then the homomorphism of fundamental groups induced by the inclusion map $j: A \to X$ is injective.
+
+\subsection{Proof.} If $r: X \to A$ is a retraction, then the composite map $r \circ j$ equals the identity map of $A$. It follows that $(r circ j)_{*} = r_{*} \circ j_{*}$ is the identity map of $\pi_{1}(A, a)$ by Theorem 3.38 and Theorem 3.40, so that $j_{*}$ is injective.
+
+\subsection{Theorem.} (No-Retraction Theorem) There is no retraction of $B^{2}$ onto $S^{1}$.
+
+\subsection{Proof.} If $S^{1}$ were a retract of $B^{2}$, then the homomorphism induced by $j: S^{1} \to B^{2}$ would be injective by Lemma 3.75. But the fundamental group of $S^{1}$ is nontrivial while the fundamental group of $B^{2}$ is trivial, a contradiction.
+
+\subsection{Lemma.} Let $h: S^{1} \to X$ be a continuous map. Then teh following conditions are equivalent.
+
+(a) $h$ is nulhomotopic.
+
+(b) $h$ extends to a continuous map $k: B^{2} \to X$.
+
+(3) $h_{*}$ is the trivial homomorphism of fundamental groups.
+
+\subsection{Proof.} TODO!
+
+\subsection{Corollary.} The inclusion map $j: S^{1} \to R^{2} \setminus \{0\}$ is not nulhomotopic. The identity map $i: S^{1} \to S^{1}$ is not nulhomotopic.
+
+\subsection{Proof.} There is a retraction of $\R^{2} \setminus \{0\}$ onto $S^{1}$. Therefore, $j_{*}$ is injective and hence nontrivial. Similarly, $i_{*}$ is the indentity homomorphism and is hence nontrivial.
+
+\subsection{Theorem.} Given a nonvanishing vector field on $B^{2}$, there exists a point of $S^{1}$ where the vector fiend points directly inward and a point of $S^{1}$ where the vector field points directly outward.
+
+\subsection{Proof.} TODO!
+
+\subsection{Theorem.} (Brouwer Fixed Point Theorem) If $f: B^{2} \to B^{2}$ is continuous, then there exists a point $x \in B^{2}$ such taht $f(x) = x$.
+
+\subsection{Proof.} Suppose, by way of contradiction, that $f(x) \neq x$ for all $x \in B^{2}$. Then define $v(x) = f(x) - x$, which yields a nonvanishing vector field $(x, v(x))$ on $B^{2}$. But the vector field cannot point directly outward at any point $x$ of $X^{1}$, for otherwise $f(x) - x = ax$ for some $a > 0$, so $f(x) = (1 + a)x$ would lie outside the unit ball $B^{2}$, hence a contradiction.
+
+\subsection{Theorem.} (Seifert-van Kampen Theorem) Suppose that $X = U \cup V$ where $U$ and $V$ are open sets of $X$. Suppose that $U \cap V$is path connected and that $x_{0} \in U \cap V$. Let $i$ and $j$ be the inclusion mappings of $U$ and $V$, respecitvely, into $X$. Then the images of the induced homomorphisms 
+$$i_{*}: \pi_{1}(U, x_{0}) \to \pi_{1}(X, x_{0})$$
+and 
+$$j_{*}: \pi_{1}(V, x_{0}) \to \pi_{1}(X, x_{0})$$
+generate $\pi_{1}(X, x_{0})$.
+
+\subsection{Proof.} TODO!
+
+\subsection{Remark.} The Seifert-van Kampen theorem says that any loop $f$ in $X$ based at $x_{0}$ is homotopic to a product of the form $g_{1} * (g_{2} * (\ldots * g_{n}))$ where each $g_{i}$ is a loop in $X$ based at $x_{0}$ that lies entirely in either $U$ or $V$.
+
+\subsection{Corollary.} Suppose that $X = U \cup V$, where $U$ and $V$ are open sets of $X$. Suppose that $U \cap V$ is nonempty and path connected. If $U$ and $V$ are simply connected, then $X$ is simply connected.
+
+\subsection{Proof.} The proof is obvious.
+
+\subsection{Theorem.} If $n = 2, 3, \ldots$, then $S^{n}$ is simply connected.
+
+\subsection{Proof.} TODO!
 
 \end{document}
